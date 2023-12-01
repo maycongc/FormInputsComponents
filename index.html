@@ -118,9 +118,6 @@
         z-index: 9999;
       }
 
-      select.form-control + .btn-group + .labelContainer > label {
-      }
-
       button.multiselect:hover,
       button.multiselect:active,
       button.multiselect:focus,
@@ -238,6 +235,8 @@
     </div>
 
     <script type="text/javascript">
+      $('#exampleSelect').val(['1', '2']);
+
       $(document).ready(function () {
         $('#exampleSelect').multiselect({
           nonSelectedText: 'Selecione',
@@ -256,9 +255,6 @@
             );
           },
         });
-
-        $('#exampleSelect').multiselect('deselectAll', false);
-        $('#exampleSelect').multiselect('select', ['1', '2']);
       });
     </script>
   </body>
