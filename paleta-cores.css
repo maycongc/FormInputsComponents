@@ -1,0 +1,240 @@
+:root {
+  --fundo-super-claro: #fff;
+  --fundo-claro: #fcfcfc;
+  --fundo-escuro: #f5f5f5;
+
+  --sistema-excluir-padrao: #e55757;
+  --sistema-excluir-escuro: #c13838;
+  --sistema-excluir-claro: #ffe8e8;
+  --sistema-erro-clara: #ffd0d0;
+  --sistema-obrigatorio: #fff2e5;
+
+  --cinza-01: #1e1e1e;
+  --cinza-02: #404040;
+  --cinza-03: #616161;
+  --cinza-04: #868686;
+  --cinza-05: #bababa;
+  --cinza-06: #e8e8e8;
+
+  --azul-50: #ecf1fc;
+  --azul-100: #d5e7f7;
+  --azul-200: #bbddfd;
+  --azul-300: #a1d0fc;
+  --azul-400: #69b0f2;
+  --azul-500: #3291df;
+  --azul-600: #0d75d7;
+  --azul-700: #0c56c6;
+  --azul-800: #003aaa;
+  --azul-900: #002d85;
+
+  --amarelo-100: #ffef98;
+  --amarelo-200: #ffd154;
+  --amarelo-300: #ffbd29;
+  --amarelo-400: #efa301;
+  --amarelo-500: #c17c01;
+  --amarelo-600: #a16300;
+  --amarelo-700: #804300;
+  --amarelo-900: #622c00;
+
+  --vermelho-100: #ffc9c2;
+  --vermelho-200: #ff958d;
+  --vermelho-300: #fd6259;
+  --vermelho-400: #f53e38;
+  --vermelho-500: #db282c;
+  --vermelho-600: #c1001b;
+  --vermelho-700: #a80009;
+  --vermelho-900: #81000b;
+
+  --verde-100: #b9e9ca;
+  --verde-200: #90e0b0;
+  --verde-300: #67c88e;
+  --verde-400: #4db275;
+  --verde-500: #30985a;
+  --verde-600: #108347;
+  --verde-700: #0d6530;
+  --verde-900: #055023;
+
+  --laranja-100: #fedcaa;
+  --laranja-200: #ffb263;
+  --laranja-300: #ff9c4e;
+  --laranja-400: #fd8342;
+  --laranja-500: #f37139;
+  --laranja-600: #ce5623;
+  --laranja-700: #af3f00;
+  --laranja-900: #8d2600;
+
+  --magenta-100: #fcd9e2;
+  --magenta-200: #ffc2d2;
+  --magenta-300: #f296b2;
+  --magenta-400: #e5739d;
+  --magenta-500: #db5a8a;
+  --magenta-600: #c44172;
+  --magenta-700: #9f1853;
+  --magenta-900: #7e0039;
+
+  --roxo-50: #edddfe;
+  --roxo-100: #ddc0fa;
+  --roxo-200: #c9a7f3;
+  --roxo-300: #b689f0;
+  --roxo-400: #a46ee9;
+  --roxo-500: #8b4fd9;
+  --roxo-600: #7937cc;
+  --roxo-700: #5f1bb5;
+  --roxo-900: #400092;
+
+  --filtro-fundo-super-claro: invert(100%) sepia(9%) saturate(7500%)
+    hue-rotate(189deg) brightness(109%) contrast(108%);
+  --filtro-fundo-claro: invert(99%) sepia(10%) saturate(610%) hue-rotate(205deg)
+    brightness(111%) contrast(98%);
+  --filtro-fundo-escuro: invert(90%) sepia(93%) saturate(7158%)
+    hue-rotate(182deg) brightness(131%) contrast(92%);
+
+  --filtro-sistema-excluir-padrao: invert(48%) sepia(9%) saturate(6525%)
+    hue-rotate(321deg) brightness(94%) contrast(90%); /* 0.3 */
+  --filtro-sistema-excluir-escuro: invert(26%) sepia(51%) saturate(1796%)
+    hue-rotate(329deg) brightness(104%) contrast(97%); /* 0.1 */
+  --filtro-sistema-excluir-claro: invert(95%) sepia(95%) saturate(285%)
+    hue-rotate(290deg) brightness(92%) contrast(122%);
+  --filtro-sistema-erro-clara: invert(71%) sepia(78%) saturate(203%)
+    hue-rotate(311deg) brightness(106%) contrast(111%);
+  --filtro-sistema-obrigatorio: invert(98%) sepia(100%) saturate(604%)
+    hue-rotate(295deg) brightness(111%) contrast(101%);
+
+  --filtro-cinza-01: invert(0%) sepia(2%) saturate(21%) hue-rotate(221deg)
+    brightness(81%) contrast(76%);
+  --filtro-cinza-02: invert(21%) sepia(6%) saturate(0%) hue-rotate(264deg)
+    brightness(95%) contrast(84%);
+  --filtro-cinza-03: invert(39%) sepia(0%) saturate(43%) hue-rotate(257deg)
+    brightness(90%) contrast(81%);
+  --filtro-cinza-04: invert(58%) sepia(18%) saturate(0%) hue-rotate(189deg)
+    brightness(88%) contrast(84%);
+  --filtro-cinza-05: invert(97%) sepia(0%) saturate(37%) hue-rotate(141deg)
+    brightness(86%) contrast(69%);
+  --filtro-cinza-06: invert(99%) sepia(3%) saturate(961%) hue-rotate(224deg)
+    brightness(114%) contrast(82%);
+
+  --filtro-azul-50: invert(100%) sepia(70%) saturate(953%) hue-rotate(178deg)
+    brightness(101%) contrast(98%);
+  --filtro-azul-100: invert(88%) sepia(21%) saturate(183%) hue-rotate(169deg)
+    brightness(98%) contrast(98%);
+  --filtro-azul-200: invert(84%) sepia(5%) saturate(2207%) hue-rotate(182deg)
+    brightness(102%) contrast(98%);
+  --filtro-azul-300: invert(69%) sepia(59%) saturate(223%) hue-rotate(171deg)
+    brightness(102%) contrast(98%);
+  --filtro-azul-400: invert(61%) sepia(17%) saturate(1341%) hue-rotate(171deg)
+    brightness(105%) contrast(90%);
+  --filtro-azul-500: invert(50%) sepia(65%) saturate(602%) hue-rotate(167deg)
+    brightness(91%) contrast(92%);
+  --filtro-azul-600: invert(29%) sepia(42%) saturate(3668%) hue-rotate(195deg)
+    brightness(98%) contrast(90%);
+  --filtro-azul-700: invert(23%) sepia(95%) saturate(1521%) hue-rotate(202deg)
+    brightness(97%) contrast(106%);
+  --filtro-azul-800: invert(12%) sepia(77%) saturate(4819%) hue-rotate(219deg)
+    brightness(90%) contrast(101%);
+  --filtro-azul-900: invert(9%) sepia(97%) saturate(3717%) hue-rotate(219deg)
+    brightness(93%) contrast(102%);
+
+  --filtro-amarelo-100: invert(90%) sepia(22%) saturate(712%) hue-rotate(349deg)
+    brightness(102%) contrast(104%);
+  --filtro-amarelo-200: invert(73%) sepia(68%) saturate(378%) hue-rotate(357deg)
+    brightness(101%) contrast(102%);
+  --filtro-amarelo-300: invert(68%) sepia(74%) saturate(474%) hue-rotate(352deg)
+    brightness(101%) contrast(101%);
+  --filtro-amarelo-400: invert(63%) sepia(20%) saturate(5206%) hue-rotate(8deg)
+    brightness(104%) contrast(99%);
+  --filtro-amarelo-500: invert(47%) sepia(14%) saturate(4471%) hue-rotate(13deg)
+    brightness(98%) contrast(99%);
+  --filtro-amarelo-600: invert(33%) sepia(18%) saturate(5692%) hue-rotate(24deg)
+    brightness(104%) contrast(101%);
+  --filtro-amarelo-700: invert(24%) sepia(31%) saturate(3663%) hue-rotate(20deg)
+    brightness(97%) contrast(101%);
+  --filtro-amarelo-900: invert(20%) sepia(27%) saturate(3267%) hue-rotate(7deg)
+    brightness(94%) contrast(105%);
+
+  --filtro-vermelho-100: invert(80%) sepia(6%) saturate(1406%)
+    hue-rotate(317deg) brightness(102%) contrast(104%);
+  --filtro-vermelho-200: invert(67%) sepia(16%) saturate(1080%)
+    hue-rotate(315deg) brightness(96%) contrast(111%);
+  --filtro-vermelho-300: invert(46%) sepia(20%) saturate(1769%)
+    hue-rotate(314deg) brightness(109%) contrast(98%);
+  --filtro-vermelho-400: invert(55%) sepia(54%) saturate(4677%)
+    hue-rotate(328deg) brightness(86%) contrast(128%); /* 0.1 */
+  --filtro-vermelho-500: invert(29%) sepia(71%) saturate(3911%)
+    hue-rotate(342deg) brightness(86%) contrast(101%); /* 0.2 */
+  --filtro-vermelho-600: invert(9%) sepia(92%) saturate(7355%)
+    hue-rotate(348deg) brightness(81%) contrast(103%);
+  --filtro-vermelho-700: invert(15%) sepia(90%) saturate(6533%)
+    hue-rotate(351deg) brightness(65%) contrast(109%);
+  --filtro-vermelho-900: invert(21%) sepia(77%) saturate(2782%)
+    hue-rotate(338deg) brightness(53%) contrast(120%);
+
+  --filtro-verde-100: invert(92%) sepia(22%) saturate(346%) hue-rotate(77deg)
+    brightness(96%) contrast(89%);
+  --filtro-verde-200: invert(76%) sepia(89%) saturate(158%) hue-rotate(85deg)
+    brightness(91%) contrast(93%);
+  --filtro-verde-300: invert(78%) sepia(29%) saturate(617%) hue-rotate(90deg)
+    brightness(87%) contrast(85%);
+  --filtro-verde-400: invert(66%) sepia(21%) saturate(1088%) hue-rotate(91deg)
+    brightness(90%) contrast(76%);
+  --filtro-verde-500: invert(50%) sepia(35%) saturate(760%) hue-rotate(91deg)
+    brightness(91%) contrast(88%);
+  --filtro-verde-600: invert(35%) sepia(95%) saturate(384%) hue-rotate(96deg)
+    brightness(94%) contrast(96%);
+  --filtro-verde-700: invert(28%) sepia(37%) saturate(910%) hue-rotate(91deg)
+    brightness(99%) contrast(97%);
+  --filtro-verde-900: invert(24%) sepia(35%) saturate(982%) hue-rotate(91deg)
+    brightness(93%) contrast(101%);
+
+  --filtro-laranja-100: invert(92%) sepia(78%) saturate(499%) hue-rotate(309deg)
+    brightness(101%) contrast(99%);
+  --filtro-laranja-200: invert(63%) sepia(95%) saturate(318%) hue-rotate(336deg)
+    brightness(104%) contrast(101%);
+  --filtro-laranja-300: invert(62%) sepia(18%) saturate(1453%)
+    hue-rotate(342deg) brightness(105%) contrast(101%);
+  --filtro-laranja-400: invert(61%) sepia(13%) saturate(2608%)
+    hue-rotate(331deg) brightness(101%) contrast(98%);
+  --filtro-laranja-500: invert(44%) sepia(76%) saturate(541%) hue-rotate(332deg)
+    brightness(108%) contrast(91%);
+  --filtro-laranja-600: invert(32%) sepia(77%) saturate(1165%)
+    hue-rotate(348deg) brightness(102%) contrast(87%);
+  --filtro-laranja-700: invert(27%) sepia(96%) saturate(1118%)
+    hue-rotate(358deg) brightness(93%) contrast(107%);
+  --filtro-laranja-900: invert(19%) sepia(21%) saturate(7403%) hue-rotate(2deg)
+    brightness(95%) contrast(102%);
+
+  --filtro-magenta-100: invert(86%) sepia(8%) saturate(652%) hue-rotate(298deg)
+    brightness(102%) contrast(98%);
+  --filtro-magenta-200: invert(82%) sepia(8%) saturate(1366%) hue-rotate(301deg)
+    brightness(99%) contrast(106%);
+  --filtro-magenta-300: invert(73%) sepia(24%) saturate(866%) hue-rotate(299deg)
+    brightness(93%) contrast(104%);
+  --filtro-magenta-400: invert(52%) sepia(47%) saturate(508%) hue-rotate(286deg)
+    brightness(98%) contrast(91%);
+  --filtro-magenta-500: invert(44%) sepia(90%) saturate(416%) hue-rotate(287deg)
+    brightness(91%) contrast(87%);
+  --filtro-magenta-600: invert(42%) sepia(11%) saturate(6570%)
+    hue-rotate(302deg) brightness(80%) contrast(88%);
+  --filtro-magenta-700: invert(16%) sepia(28%) saturate(7352%)
+    hue-rotate(316deg) brightness(92%) contrast(96%);
+  --filtro-magenta-900: invert(9%) sepia(47%) saturate(6414%) hue-rotate(320deg)
+    brightness(99%) contrast(109%);
+
+  --filtro-roxo-50: invert(92%) sepia(5%) saturate(3309%) hue-rotate(197deg)
+    brightness(101%) contrast(99%);
+  --filtro-roxo-100: invert(69%) sepia(50%) saturate(205%) hue-rotate(225deg)
+    brightness(105%) contrast(96%);
+  --filtro-roxo-200: invert(72%) sepia(10%) saturate(1694%) hue-rotate(218deg)
+    brightness(99%) contrast(93%);
+  --filtro-roxo-300: invert(60%) sepia(17%) saturate(1495%) hue-rotate(221deg)
+    brightness(101%) contrast(88%);
+  --filtro-roxo-400: invert(48%) sepia(42%) saturate(869%) hue-rotate(223deg)
+    brightness(99%) contrast(85%);
+  --filtro-roxo-500: invert(32%) sepia(64%) saturate(2289%) hue-rotate(247deg)
+    brightness(91%) contrast(86%);
+  --filtro-roxo-600: invert(25%) sepia(54%) saturate(3734%) hue-rotate(257deg)
+    brightness(83%) contrast(92%);
+  --filtro-roxo-700: invert(13%) sepia(61%) saturate(5947%) hue-rotate(266deg)
+    brightness(90%) contrast(99%);
+  --filtro-roxo-900: invert(21%) sepia(20%) saturate(6079%) hue-rotate(250deg)
+    brightness(86%) contrast(150%);
+}
