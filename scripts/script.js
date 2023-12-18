@@ -5,7 +5,7 @@ $(document).ready(function () {
   jQuery.fn.datepicker.defaults.maxViewMode = 3;
   jQuery.fn.datepicker.defaults.todayHighlight = true;
   jQuery.fn.datepicker.defaults.todayBtn = 'linked';
-  jQuery.fn.datepicker.defaults.clearBtn = true;
+  jQuery.fn.datepicker.defaults.clearBtn = false;
   jQuery.fn.datepicker.defaults.autoclose = true;
   jQuery.fn.datepicker.defaults.orientation = 'bottom';
   jQuery.fn.datepicker.defaults.templates.leftArrow =
@@ -25,12 +25,7 @@ function habilitarMascaraData() {
   });
 
   jQuery('.data-noButton:not([readonly])').datepicker({
-    clearBtn: false,
     todayBtn: false,
-  });
-
-  jQuery('.data-buttonHoje:not([readonly])').datepicker({
-    clearBtn: false,
   });
 
   // abrir o componente sem problemas quando clicar no campo novamente com foco
@@ -57,91 +52,28 @@ function habilitarMascaraData() {
         );
         thBotoesDatepicker.append(containerBotoesDatepicker);
 
-        const botaoLimpar = document.createElement('button');
-        jQuery(botaoLimpar)
-          .prop('class', 'datepickerBotaoLimpar clear tipo3')
-          .text('Limpar');
-
         const botaoHoje = document.createElement('button');
         jQuery(botaoHoje)
-          .prop('class', 'datepickerBotaoHoje today tipo1')
+          .prop('class', 'datepickerBotaoHoje today ghost')
           .text('Hoje');
 
         const botoesHoje = jQuery(
           '.table-condensed tfoot th.today:not([style*="display: none"])',
         );
-        const botoesLimpar = jQuery(
-          '.table-condensed tfoot th.clear:not([style*="display: none"])',
-        );
 
-        const botoes = {};
-
-        botoesHoje?.toArray().forEach(botao => {
-          const classeElementoPai =
-            getClassDatePickerElementoPaiBotao(botao).prop('class');
-          botoes[classeElementoPai] = [botao];
-        });
-
-        botoesLimpar?.toArray().forEach(botao => {
-          const classeElementoPai =
-            getClassDatePickerElementoPaiBotao(botao).prop('class');
-
-          if (typeof botoes[classeElementoPai] === 'undefined') {
-            botoes[classeElementoPai] = [botao];
-          } else {
-            botoes[classeElementoPai].push(botao);
-          }
-        });
-
-        for (const [key, value] of Object.entries(botoes)) {
-          const [btnHoje, btnLimpar] = value;
-
+        botoesHoje.toArray().forEach(btnHoje => {
           const copiaThBotoes = thBotoesDatepicker.cloneNode(true);
 
-          if (btnHoje && btnLimpar) {
-            btnHoje.insertAdjacentElement('beforebegin', copiaThBotoes);
+          btnHoje.insertAdjacentElement('beforebegin', copiaThBotoes);
 
-            const container = jQuery(copiaThBotoes).find(
-              '.containerBotoesDatepicker',
-            );
+          const container = jQuery(copiaThBotoes).find(
+            '.containerBotoesDatepicker',
+          );
 
-            container.append(botaoLimpar.cloneNode(true));
-            container.append(botaoHoje.cloneNode(true));
-            container.css('justify-content', 'space-between');
-
-            btnHoje.remove();
-            btnLimpar.remove();
-            continue;
-          }
-
-          if (btnHoje) {
-            btnHoje.insertAdjacentElement('beforebegin', copiaThBotoes);
-            jQuery(copiaThBotoes)
-              .find('.containerBotoesDatepicker')
-              .append(botaoHoje.cloneNode(true));
-
-            btnHoje.remove();
-            continue;
-          }
-
-          if (btnLimpar) {
-            btnLimpar.insertAdjacentElement('beforebegin', copiaThBotoes);
-            jQuery(copiaThBotoes)
-              .find('.containerBotoesDatepicker')
-              .append(botaoLimpar.cloneNode(true));
-
-            btnLimpar.remove();
-            continue;
-          }
-        }
+          container.append(botaoHoje.cloneNode(true));
+          btnHoje.remove();
+        });
       }
     },
-  );
-}
-
-function getClassDatePickerElementoPaiBotao(elemento) {
-  return jQuery(elemento).closest(
-    '.datepicker-days, .datepicker-months, .datepicker-years, .datepicker-decades, .datepicker-centuries',
-    jQuery('.datepicker'),
   );
 }

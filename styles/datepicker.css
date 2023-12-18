@@ -148,7 +148,7 @@ div.datepicker th.dow {
   justify-content: center;
 }
 
-button.datepickerBotaoHoje,
-button.datepickerBotaoLimpar {
+button.datepickerBotaoHoje {
   height: 32px;
+  width: 100%;
 }
