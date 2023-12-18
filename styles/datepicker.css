@@ -1,0 +1,154 @@
+div.datepicker {
+  padding: 12px;
+  border-radius: 8px;
+  z-index: 1050;
+}
+
+div.datepicker table {
+  border-spacing: 0;
+}
+
+div.datepicker th.dow {
+  min-width: 30px;
+  max-width: 30px;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--cinza-05);
+  border-radius: 0;
+  color: var(--azul-500);
+}
+
+.datepicker .table-condensed tr td.day {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+  background: var(--fundo-super-claro);
+}
+
+.datepicker .table-condensed tr td span.month,
+.datepicker .table-condensed tr td span.year,
+.datepicker .table-condensed tr td span.decade {
+  height: 36px;
+  line-height: 36px;
+  width: 61px;
+}
+
+.datepicker .table-condensed tr td.day,
+.datepicker table tr td span.month,
+.datepicker table tr td span.year,
+.datepicker table tr td span.decade {
+  transition: all 0.2s ease;
+}
+
+.datepicker .table-condensed tr td.day:hover,
+.datepicker .table-condensed tr td.today.day:hover,
+.datepicker .table-condensed tr td.focused.day,
+.datepicker .table-condensed tr td.focused.today.day,
+.datepicker .table-condensed tr td span.month:hover,
+.datepicker .table-condensed tr td span.today.month:hover,
+.datepicker .table-condensed tr td span.focused.month,
+.datepicker .table-condensed tr td span.focused.today.month,
+.datepicker .table-condensed tr td span.year:hover,
+.datepicker .table-condensed tr td span.today.year:hover,
+.datepicker .table-condensed tr td span.focused.year,
+.datepicker .table-condensed tr td span.focused.today.year,
+.datepicker .table-condensed tr td span.decade:hover,
+.datepicker .table-condensed tr td span.today.decade:hover,
+.datepicker .table-condensed tr td span.focused.decade,
+.datepicker .table-condensed tr td span.focused.today.decade {
+  background: var(--azul-100);
+}
+
+.datepicker .table-condensed tr td.active.day,
+.datepicker .table-condensed tr td.today.active.day,
+.datepicker .table-condensed tr td.focused.today.active.day,
+.datepicker .table-condensed tr td span.active.month,
+.datepicker .table-condensed tr td span.today.active.month,
+.datepicker .table-condensed tr td span.focused.today.active.month,
+.datepicker .table-condensed tr td span.active.year,
+.datepicker .table-condensed tr td span.today.active.year,
+.datepicker .table-condensed tr td span.focused.today.active.year,
+.datepicker .table-condensed tr td span.active.decade,
+.datepicker .table-condensed tr td span.today.active.decade,
+.datepicker .table-condensed tr td span.focused.today.active.decade {
+  background: var(--azul-700);
+  font-weight: bold;
+  border: none;
+}
+
+.datepicker .table-condensed tr td.today.active.day:hover,
+.datepicker .table-condensed tr td.focused.today.active.day,
+.datepicker .table-condensed tr td.focused.today.active.day:hover,
+.datepicker .table-condensed tr td span.today.active.month:hover,
+.datepicker .table-condensed tr td span.focused.today.active.month,
+.datepicker .table-condensed tr td span.focused.today.active.month:hover,
+.datepicker .table-condensed tr td span.today.active.year:hover,
+.datepicker .table-condensed tr td span.focused.today.active.year,
+.datepicker .table-condensed tr td span.focused.today.active.year:hover,
+.datepicker .table-condensed tr td span.today.active.decade:hover,
+.datepicker .table-condensed tr td span.focused.today.active.decade,
+.datepicker .table-condensed tr td span.focused.today.active.decade:hover {
+  filter: brightness(0.9);
+  background: var(--azul-700);
+}
+
+.datepicker .table-condensed tr td span.old,
+.datepicker .table-condensed tr td span.new {
+  color: var(--cinza-01);
+}
+
+.datepicker .table-condensed tr td span.old.active,
+.datepicker .table-condensed tr td span.new.active {
+  color: var(--fundo-claro);
+}
+
+.datepicker .table-condensed tr td.today.day {
+  background: var(--fundo-super-claro);
+  border: 1px solid var(--azul-600);
+  font-weight: bold;
+}
+
+.datepicker .table-condensed {
+  border-collapse: separate;
+}
+
+.datepicker .table-condensed thead {
+  border-bottom: 1px solid var(--cinza-06);
+  color: var(--cinza-04);
+}
+
+.datepicker th.prev,
+.datepicker th.next {
+  padding: 0;
+  height: 30px;
+  width: 30px;
+}
+
+.datepicker th.prev > img,
+.datepicker th.next > img {
+  width: 20px;
+  filter: var(--filtro-azul-700);
+}
+
+.datepicker .datepicker-switch {
+  color: var(--cinza-01);
+}
+
+.table-condensed tfoot th {
+  padding: 0;
+}
+
+.datepicker .table-condensed tfoot tr th:hover {
+  background: inherit;
+  cursor: initial;
+}
+
+.containerBotoesDatepicker {
+  display: flex;
+  margin-top: 8px;
+  justify-content: center;
+}
+
+button.datepickerBotaoHoje,
+button.datepickerBotaoLimpar {
+  height: 32px;
+}

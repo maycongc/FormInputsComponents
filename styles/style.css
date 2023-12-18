@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  font-weight: 400;
+  padding: 40px 0;
+  background: #fcfcfc;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input.form-control {
+  height: 32px;
+  padding: 0px 8px;
+
+  box-shadow: none;
+  border-radius: 4px;
+  border: 1px solid var(--neutras-cinza-04, #868686);
+
+  color: var(--neutras-cinza-02, #404040);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.204px;
+}
+
+input.form-control:hover {
+  border: 1px solid var(--neutras-cinza-02, #404040);
+}
+
+input.form-control:focus {
+  border-radius: 4px;
+  border: 1px solid var(--interao-focus, #2b74ff);
+  box-shadow: none;
+
+  outline: 2px solid var(--branding-azul-300, #a1d0fc);
+  outline-offset: 0px;
+}
+
+.labelContainer {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 5px;
+  height: 32px;
+  align-items: center;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+.labelContainer > label {
+  margin: 0;
+  pointer-events: none;
+  padding: 0 4px;
+
+  color: var(--neutras-cinza-03, #616161);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.204px;
+  transition: 0.2s ease all;
+}
+
+input.form-control:focus + .labelContainer,
+input.form-control:not(:placeholder-shown) + .labelContainer {
+  top: -17px;
+  left: 7px;
+}
+
+input.form-control:focus + .labelContainer > label {
+  color: var(--interao-focus, #2b74ff);
+}
+
+input.form-control:focus + .labelContainer > label,
+input.form-control:not(:placeholder-shown) + .labelContainer > label,
+select.form-control + .btn-group + .labelContainer > label {
+  background: #fcfcfc;
+
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: -0.17px;
+}
+
+/* SELECT */
+
+select.form-control + .btn-group + .labelContainer {
+  top: -17px;
+  left: 7px;
+  z-index: 999;
+}
+
+button.multiselect:hover,
+button.multiselect:active,
+button.multiselect:focus,
+button.multiselect:active:hover,
+.open > button.multiselect.dropdown-toggle.btn {
+  background: initial;
+  box-shadow: none;
+}
+
+button.multiselect:active,
+button.multiselect:focus,
+.open > button.multiselect.dropdown-toggle.btn {
+  outline: 2px solid var(--branding-azul-300, #a1d0fc);
+  outline-offset: 0px;
+  border-color: var(--interao-focus, #2b74ff);
+}
+
+.open > .multiselect-container.dropdown-menu {
+  top: calc(100% + 3px);
+  padding: 4px 0;
+  max-height: 426px;
+  overflow-y: auto;
+}
+
+input.form-control:focus + .labelContainer > label,
+.labelContainer.open > label {
+  color: var(--interao-focus, #2b74ff);
+}
+
+.multiselect-container > li > a {
+  display: flex;
+  align-items: center;
+  background: var(--branding-azul-700, #fcfcfc);
+  color: #404040;
+  height: 32px;
+  width: 100%;
+  transition: 0.2s ease all;
+}
+
+.multiselect-container > li.active > a {
+  background: var(--azul-700, #0c56c6);
+}
+
+.multiselect-container > li.active > a:hover {
+  background: var(--azul-750, #0a4db1);
+}
+
+.multiselect-container > li > a > label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}

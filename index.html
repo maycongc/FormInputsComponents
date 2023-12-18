@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Floating Label Example</title>
-    <link rel="stylesheet" href="./paleta-cores.css" />
+    <title>Inputs</title>
+    <link rel="stylesheet" href="./styles/paleta-cores.css" />
+    <link rel="stylesheet" href="./styles/datepicker.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/botoes.css" />
+
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -19,158 +23,20 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css"
     />
 
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+    <!-- Bootstrap-datepicker CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.min.css"
+    />
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Open Sans', sans-serif;
-      }
+    <!-- Bootstrap-datepicker JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
 
-      body {
-        font-weight: 400;
-        padding: 40px 0;
-        background: #fcfcfc;
-      }
+    <!-- Bootstrap-datepicker para o idioma português brasileiro -->
+    <script src="./scripts/bootstrap-datepicker.pt-BR.min.js"></script>
 
-      .form-group {
-        position: relative;
-        margin-bottom: 20px;
-      }
-
-      input.form-control {
-        height: 32px;
-        padding: 0px 8px;
-
-        box-shadow: none;
-        border-radius: 4px;
-        border: 1px solid var(--neutras-cinza-04, #868686);
-
-        color: var(--neutras-cinza-02, #404040);
-        font-size: 12px;
-        font-weight: 400;
-        letter-spacing: -0.204px;
-      }
-
-      input.form-control:hover {
-        border: 1px solid var(--neutras-cinza-02, #404040);
-      }
-
-      input.form-control:focus {
-        border-radius: 4px;
-        border: 1px solid var(--interao-focus, #2b74ff);
-        box-shadow: none;
-
-        outline: 2px solid var(--branding-azul-300, #a1d0fc);
-        outline-offset: 0px;
-      }
-
-      .labelContainer {
-        position: absolute;
-        display: flex;
-        top: 0;
-        left: 5px;
-        height: 32px;
-        align-items: center;
-        pointer-events: none;
-        transition: 0.2s ease all;
-      }
-
-      .labelContainer > label {
-        margin: 0;
-        pointer-events: none;
-        padding: 0 4px;
-
-        color: var(--neutras-cinza-03, #616161);
-        font-size: 12px;
-        font-weight: 400;
-        letter-spacing: -0.204px;
-        transition: 0.2s ease all;
-      }
-
-      input.form-control:focus + .labelContainer,
-      input.form-control:not(:placeholder-shown) + .labelContainer {
-        top: -17px;
-        left: 7px;
-      }
-
-      input.form-control:focus + .labelContainer > label {
-        color: var(--interao-focus, #2b74ff);
-      }
-
-      input.form-control:focus + .labelContainer > label,
-      input.form-control:not(:placeholder-shown) + .labelContainer > label,
-      select.form-control + .btn-group + .labelContainer > label {
-        background: #fcfcfc;
-
-        font-size: 10px;
-        font-weight: 400;
-        letter-spacing: -0.17px;
-      }
-
-      /* SELECT */
-
-      select.form-control + .btn-group + .labelContainer {
-        top: -17px;
-        left: 7px;
-        z-index: 9999;
-      }
-
-      button.multiselect:hover,
-      button.multiselect:active,
-      button.multiselect:focus,
-      button.multiselect:active:hover,
-      .open > button.multiselect.dropdown-toggle.btn {
-        background: initial;
-        box-shadow: none;
-      }
-
-      button.multiselect:active,
-      button.multiselect:focus,
-      .open > button.multiselect.dropdown-toggle.btn {
-        outline: 2px solid var(--branding-azul-300, #a1d0fc);
-        outline-offset: 0px;
-        border-color: var(--interao-focus, #2b74ff);
-      }
-
-      .open > .multiselect-container.dropdown-menu {
-        top: calc(100% + 3px);
-        padding: 4px 0;
-        max-height: 426px;
-        overflow-y: auto;
-      }
-
-      input.form-control:focus + .labelContainer > label,
-      .labelContainer.open > label {
-        color: var(--interao-focus, #2b74ff);
-      }
-
-      .multiselect-container > li > a {
-        display: flex;
-        align-items: center;
-        background: var(--branding-azul-700, #fcfcfc);
-        color: #404040;
-        height: 32px;
-        width: 100%;
-        transition: 0.2s ease all;
-      }
-
-      .multiselect-container > li.active > a {
-        background: var(--azul-700, #0c56c6);
-      }
-
-      .multiselect-container > li.active > a:hover {
-        background: var(--azul-750, #0a4db1);
-      }
-
-      .multiselect-container > li > a > label {
-        display: flex;
-        align-items: center;
-        width: 100%;
-      }
-    </style>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/multiselect.js"></script>
   </head>
   <body>
     <div class="container">
@@ -230,32 +96,60 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control data-completa"
+            id="dataCompleta"
+            placeholder=" "
+          />
+
+          <div class="labelContainer">
+            <label for="dataCompleta">Data</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control data-mesAno"
+            id="dataMesAno"
+            placeholder=" "
+          />
+
+          <div class="labelContainer">
+            <label for="dataMesAno">Data mês ano</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control data-noButton"
+            id="dataSemBotao"
+            placeholder=" "
+          />
+
+          <div class="labelContainer">
+            <label for="dataSemBotao">Data sem botoes</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control data-buttonHoje"
+            id="dataBotaoHoje"
+            placeholder=" "
+          />
+
+          <div class="labelContainer">
+            <label for="dataBotaoHoje">Data só botão hoje</label>
+          </div>
+        </div>
+
+        <button type="reset" class="btn btn-primary">Limpar</button>
       </form>
     </div>
-
-    <script type="text/javascript">
-      $('#exampleSelect').val(['1', '2']);
-
-      $(document).ready(function () {
-        $('#exampleSelect').multiselect({
-          nonSelectedText: 'Selecione',
-          includeSelectAllOption: true,
-          selectAllText: 'Selecionar todos',
-          allSelectedText: 'Todos selecionados',
-          nSelectedText: 'Selecionados',
-
-          onDropdownShow: () => {
-            $('#exampleSelect + .btn-group + .labelContainer').addClass('open');
-          },
-
-          onDropdownHide: () => {
-            $('#exampleSelect + .btn-group + .labelContainer').removeClass(
-              'open',
-            );
-          },
-        });
-      });
-    </script>
   </body>
 </html>
