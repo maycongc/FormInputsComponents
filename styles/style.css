@@ -38,7 +38,7 @@ input.form-control:hover {
 
 input.form-control:focus {
   border-radius: 4px;
-  border: 1px solid var(--interao-focus, #2b74ff);
+  border: 1px solid var(--texto-focus);
   box-shadow: none;
 
   outline: 2px solid var(--branding-azul-300, #a1d0fc);
@@ -75,7 +75,7 @@ input.form-control:not(:placeholder-shown) + .labelContainer {
 }
 
 input.form-control:focus + .labelContainer > label {
-  color: var(--interao-focus, #2b74ff);
+  color: var(--texto-focus);
 }
 
 input.form-control:focus + .labelContainer > label,
@@ -110,7 +110,7 @@ button.multiselect:focus,
 .open > button.multiselect.dropdown-toggle.btn {
   outline: 2px solid var(--branding-azul-300, #a1d0fc);
   outline-offset: 0px;
-  border-color: var(--interao-focus, #2b74ff);
+  border-color: var(--texto-focus);
 }
 
 .open > .multiselect-container.dropdown-menu {
@@ -122,7 +122,7 @@ button.multiselect:focus,
 
 input.form-control:focus + .labelContainer > label,
 .labelContainer.open > label {
-  color: var(--interao-focus, #2b74ff);
+  color: var(--texto-focus);
 }
 
 .multiselect-container > li > a {

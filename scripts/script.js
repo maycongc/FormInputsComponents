@@ -5,7 +5,6 @@ $(document).ready(function () {
   jQuery.fn.datepicker.defaults.maxViewMode = 3;
   jQuery.fn.datepicker.defaults.todayHighlight = true;
   jQuery.fn.datepicker.defaults.todayBtn = 'linked';
-  jQuery.fn.datepicker.defaults.clearBtn = false;
   jQuery.fn.datepicker.defaults.autoclose = true;
   jQuery.fn.datepicker.defaults.orientation = 'bottom';
   jQuery.fn.datepicker.defaults.templates.leftArrow =
